@@ -2,6 +2,8 @@
   "name": "redmine-client",
   "version": "0.1.0",
   "private": true,
+  "main": "src/electron-starter.js",
+  "homepage": "./",
   "dependencies": {
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -10,8 +12,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "npm-run-all --parallel electron start"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +25,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "electron": "^4.0.0",
+    "electron-packager": "^13.0.1",
+    "yarn-run-all": "^3.1.1"
+  }
 }
